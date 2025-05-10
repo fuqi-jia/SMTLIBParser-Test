@@ -16,3 +16,9 @@ cmake ..
 make
 ./SMTLIBParser_Test ../test/1.smt2
 ```
+
+## Update SMTLIBParser
+```
+git submodule update --init --recursive (optional)
+git submodule update --remote --merge
+```
