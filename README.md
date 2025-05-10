@@ -23,6 +23,6 @@ git submodule update --remote --merge
 ```
 mkdir build && cd build
 cmake ..
-make
+make -j12
 ./SMTLIBParser_Test ../test/1.smt2
 ```
