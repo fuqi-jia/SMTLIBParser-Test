@@ -9,16 +9,20 @@ sudo apt install libboost-all-dev
 sudo apt install libgmp-dev
 ```
 
-## Command
+## Update SMTLIBParser
+Submodule init:
+```
+git submodule update --init --recursive
+```
+Submodule update:
+```
+git submodule update --remote --merge
+```
+
+## Run Command
 ```
 mkdir build && cd build
 cmake ..
 make
 ./SMTLIBParser_Test ../test/1.smt2
-```
-
-## Update SMTLIBParser
-```
-git submodule update --init --recursive (optional)
-git submodule update --remote --merge
 ```
