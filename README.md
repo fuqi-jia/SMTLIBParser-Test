@@ -26,3 +26,8 @@ cmake ..
 make -j12
 ./SMTLIBParser_Test ../test/1.smt2
 ```
+
+and then output
+```
+parse success
+```
