@@ -44,4 +44,5 @@ build/
 # Install
 install_manifest.txt
 
-
+test/
+*.json
