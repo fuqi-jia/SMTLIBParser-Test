@@ -10,6 +10,9 @@ import multiprocessing
 import argparse
 from pathlib import Path
 
+# 添加锁以保护共享数据
+from threading import Lock
+
 def find_smt2_files(directory):
     """递归查找目录中的所有.smt2文件"""
     smt2_files = []
@@ -111,6 +114,7 @@ def main():
     test_path = input_path
     
     all_results = {}  # 存储所有测试结果
+    results_lock = Lock()  # 创建锁保护共享数据的访问
     
     # 测试目录中的所有文件
     print(f"正在查找 {test_path} 中的所有.smt2文件...")
@@ -138,16 +142,18 @@ def main():
                 success, file_path, error_msg = future.result()
                 print(f"[全部文件 {i+1}/{len(smt2_files)}] 测试: {file_path}")
                 
-                if success:
-                    print(f"✅ 测试成功: {file_path}")
-                    success_count += 1
-                    all_results[file_path] = True
-                else:
-                    print(f"❌ 测试失败: {file_path}")
-                    if error_msg:
-                        print(error_msg)
-                    failed_files.append(file_path)
-                    all_results[file_path] = False
+                # 使用锁保护共享数据的更新
+                with results_lock:
+                    if success:
+                        print(f"✅ 测试成功: {file_path}")
+                        success_count += 1
+                        all_results[file_path] = True
+                    else:
+                        print(f"❌ 测试失败: {file_path}")
+                        if error_msg:
+                            print(error_msg)
+                        failed_files.append(file_path)
+                        all_results[file_path] = False
         
         print("\n全部文件测试结果汇总:")
         print(f"总文件数: {len(smt2_files)}")
@@ -156,8 +162,6 @@ def main():
         
         # 更新失败文件列表，合并之前的失败文件
         all_failed_files = []
-        if os.path.exists(failed_files_path):
-            all_failed_files = load_failed_files(failed_files_path)
         
         # 添加新的失败文件
         for f in failed_files:
@@ -189,6 +193,8 @@ def main():
 def test_failed_files(failed_files_path, executable, process_count):
     """测试失败文件列表"""
     all_results = {}  # 存储所有测试结果
+    results_lock = Lock()  # 创建锁保护共享数据访问
+    
     failed_files = load_failed_files(failed_files_path)
     print(f"将测试 {len(failed_files)} 个失败文件")
     
@@ -204,16 +210,18 @@ def test_failed_files(failed_files_path, executable, process_count):
                 success, file_path, error_msg = future.result()
                 print(f"[失败文件 {i+1}/{len(failed_files)}] 测试: {file_path}")
                 
-                if success:
-                    print(f"✅ 测试成功: {file_path}")
-                    success_count += 1
-                    all_results[file_path] = True
-                else:
-                    print(f"❌ 测试失败: {file_path}")
-                    if error_msg:
-                        print(error_msg)
-                    still_failing.append(file_path)
-                    all_results[file_path] = False
+                # 使用锁保护共享数据的更新
+                with results_lock:
+                    if success:
+                        print(f"✅ 测试成功: {file_path}")
+                        success_count += 1
+                        all_results[file_path] = True
+                    else:
+                        print(f"❌ 测试失败: {file_path}")
+                        if error_msg:
+                            print(error_msg)
+                        still_failing.append(file_path)
+                        all_results[file_path] = False
         
         print("\n失败文件测试结果汇总:")
         print(f"总文件数: {len(failed_files)}")
