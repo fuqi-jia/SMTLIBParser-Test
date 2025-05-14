@@ -1,5 +1,5 @@
 SMTLIBParser 测试结果
-运行时间: Wed May 14 19:40:34 CST 2025
+运行时间: Wed May 14 23:51:25 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 62 个测试文件.
@@ -96,8 +96,8 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_FP/Float_div-main.smt2
-error: Unknown or unexptected symbol "#x7f" in line 468.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
 
 ----------------------------------------
 测试文件: ./QF_FP/nan_double-main.smt2
@@ -117,12 +117,12 @@ error: Unknown or unexptected symbol "FPN" in line 18.
 
 ----------------------------------------
 测试文件: ./QF_FP/square_7_true-unreach-call-main.smt2
-error: Unknown or unexptected symbol "roundNearestTiesToEven" in line 13.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_FP/test_v5_r5_vr1_c1_s16138.smt2
-error: Unknown or unexptected symbol "fp" in line 14.
+error: Unknown or unexptected symbol "RoundingMode" in line 41.
 [33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
@@ -132,7 +132,8 @@ error: Unknown or unexptected symbol "RoundingMode" in line 32.
 
 ----------------------------------------
 测试文件: ./QF_LIA/FISCHER10-10-fair.smt2
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/Carpark2-ausgabe-8.smt2
@@ -156,7 +157,8 @@ SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/
 
 ----------------------------------------
 测试文件: ./QF_LRA/p-DepotsNum_s8.msat.smt2
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/pd_no_op_accs.induction.smt2
@@ -280,28 +282,28 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_S/instance00000.smt2
-error: Unknown or unexptected symbol "_" in line 16.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
 
 ----------------------------------------
 测试文件: ./QF_S/instance00005.smt2
-error: Unknown or unexptected symbol "re.comp" in line 16.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
 
 ----------------------------------------
 测试文件: ./QF_S/instance00011.smt2
-error: Unknown or unexptected symbol "re.opt" in line 16.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/instance00020.smt2
-error: Unknown or unexptected symbol "re.allchar" in line 16.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/lyndon-schuetzenberg-1.smt2
-error: Unknown or unexptected symbol "re.all" in line 23.
-[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/noodles-unsat-3.smt2
@@ -316,8 +318,8 @@ parse success
 ---------------------------------------- test_summary.log
 测试摘要:
 总测试文件数: 62
-[32m成功: 46[0m
-[31m失败: 14[0m
-[31m崩溃: 2[0m
-总耗时: 10 秒
+[32m成功: 52[0m
+[31m失败: 10[0m
+[31m崩溃: 0[0m
+总耗时: 11 秒
 ---------------------------------------- test_summary.log
