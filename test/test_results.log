@@ -1,5 +1,5 @@
 SMTLIBParser 测试结果
-运行时间: Thu May 15 02:19:42 CST 2025
+运行时间: Thu May 15 02:33:36 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 62 个测试文件.
@@ -147,15 +147,13 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/current_frame.base.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/good_frame_update.induction.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/p-DepotsNum_s8.msat.smt2
@@ -164,15 +162,13 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/pd_no_op_accs.induction.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/pd_not_sc_seen.base.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_LRA/simple_example_1-node2318.smt2
@@ -226,9 +222,8 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/InVarSynth_agroce_minmax.c_Iteration2_1.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/MulliganEconomicsModel0055a.smt2
@@ -242,51 +237,43 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-6-e-chunk-0134.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-6-e-chunk-0135.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-neg-4-e-chunk-0215.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-neg-4-e-chunk-0216.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-neg-6-e-chunk-0215.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/exp-361-neg-6-e-chunk-0216.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/huge_runtime_PRAY.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_NRA/pentagon.t2.c_Iteration12_Loop_3-pieceTemplate.smt2
-terminate called after throwing an instance of 'std::invalid_argument'
-  what():  mpz_set_str
-[31m✗ 失败[0m - parse failed
+parse success
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/cyclic-xy.smt2
@@ -331,8 +318,8 @@ parse success
 ---------------------------------------- test_summary.log
 测试摘要:
 总测试文件数: 62
-[32m成功: 45[0m
-[31m失败: 17[0m
+[32m成功: 58[0m
+[31m失败: 4[0m
 [31m崩溃: 0[0m
 总耗时: 12 秒
 ---------------------------------------- test_summary.log
