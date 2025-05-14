@@ -1,0 +1,179 @@
+#include "parser.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <memory>
+#include <z3++.h>
+
+using namespace SMTLIBParser;
+
+bool check_equivalence(const std::string& original_file, const std::string& output_file) {
+    try {
+        z3::context ctx;
+        
+        // 创建求解器
+        z3::solver solver1(ctx);
+        z3::solver solver2(ctx);
+        
+        // 加载并解析SMT文件
+        std::cout << "解析原始文件: " << original_file << std::endl;
+        if (Z3_solver_from_file(solver1.ctx(), solver1, original_file.c_str()) != Z3_TRUE) {
+            std::cerr << "无法解析原始文件: " << original_file << std::endl;
+            return false;
+        }
+        
+        std::cout << "解析输出文件: " << output_file << std::endl;
+        if (Z3_solver_from_file(solver2.ctx(), solver2, output_file.c_str()) != Z3_TRUE) {
+            std::cerr << "无法解析输出文件: " << output_file << std::endl;
+            return false;
+        }
+        
+        // 方法1: 检查可满足性是否一致
+        std::cout << "验证可满足性一致性..." << std::endl;
+        z3::check_result result1 = solver1.check();
+        z3::check_result result2 = solver2.check();
+        
+        if (result1 != result2) {
+            std::cout << "可满足性不一致!" << std::endl;
+            std::cout << "原始文件: " << result1 << std::endl;
+            std::cout << "输出文件: " << result2 << std::endl;
+            return false;
+        }
+        
+        // 方法2: 创建新的求解器来验证公式等价性
+        // 获取solver1的断言
+        z3::expr_vector assertions1(ctx);
+        unsigned num_assertions1 = Z3_solver_get_num_assertions(ctx, solver1);
+        for (unsigned i = 0; i < num_assertions1; i++) {
+            z3::expr assertion(ctx, Z3_solver_get_assertion(ctx, solver1, i));
+            assertions1.push_back(assertion);
+        }
+        
+        // 获取solver2的断言
+        z3::expr_vector assertions2(ctx);
+        unsigned num_assertions2 = Z3_solver_get_num_assertions(ctx, solver2);
+        for (unsigned i = 0; i < num_assertions2; i++) {
+            z3::expr assertion(ctx, Z3_solver_get_assertion(ctx, solver2, i));
+            assertions2.push_back(assertion);
+        }
+        
+        // 如果没有断言，返回真（两个空文件被视为等价）
+        if (assertions1.size() == 0 && assertions2.size() == 0) {
+            std::cout << "两个文件都没有断言，视为等价" << std::endl;
+            return true;
+        }
+        
+        // 创建公式的合取
+        z3::expr formula1 = assertions1.size() > 0 ? assertions1[0] : ctx.bool_val(true);
+        for (unsigned i = 1; i < assertions1.size(); i++) {
+            formula1 = formula1 && assertions1[i];
+        }
+        
+        z3::expr formula2 = assertions2.size() > 0 ? assertions2[0] : ctx.bool_val(true);
+        for (unsigned i = 1; i < assertions2.size(); i++) {
+            formula2 = formula2 && assertions2[i];
+        }
+        
+        // 验证等价性：formula1 => formula2
+        std::cout << "验证原始公式蕴含输出公式..." << std::endl;
+        z3::solver eq_solver1(ctx);
+        eq_solver1.add(!z3::implies(formula1, formula2));
+        if (eq_solver1.check() == z3::sat) {
+            std::cout << "原始公式不蕴含输出公式!" << std::endl;
+            return false;
+        }
+        
+        // 验证等价性：formula2 => formula1
+        std::cout << "验证输出公式蕴含原始公式..." << std::endl;
+        z3::solver eq_solver2(ctx);
+        eq_solver2.add(!z3::implies(formula2, formula1));
+        if (eq_solver2.check() == z3::sat) {
+            std::cout << "输出公式不蕴含原始公式!" << std::endl;
+            return false;
+        }
+        
+        std::cout << "两个SMT文件在逻辑上是等价的!" << std::endl;
+        return true;
+    } catch (const z3::exception& e) {
+        std::cerr << "Z3异常: " << e << std::endl;
+        return false;
+    }
+}
+
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cerr << "用法: " << argv[0] << " <输入SMT文件>" << std::endl;
+        return 1;
+    }
+    
+    // 输入文件
+    std::string input_file = argv[1];
+    
+    // 输出文件
+    std::string output_file = input_file + ".out.smt2";
+    
+    // 解析器
+    std::shared_ptr<SMTLIBParser::Parser> parser = 
+        std::make_shared<SMTLIBParser::Parser>();
+
+    // 解析输入文件
+    if(parser->parse(input_file)) {
+        std::cout << "解析成功" << std::endl;
+        
+        // 获取断言并导出到新文件
+        std::vector<std::shared_ptr<DAGNode>> assertions = parser->getAssertions();
+        std::ofstream ofs(output_file);
+        if (!ofs.is_open()) {
+            std::cerr << "无法创建输出文件: " << output_file << std::endl;
+            return 1;
+        }
+        
+        // 导出解析后的SMT，确保包含所有必要的前缀声明
+        // 添加逻辑声明
+        if (parser->getOptions() && !parser->getOptions()->getLogic().empty()) {
+            ofs << "(set-logic " << parser->getOptions()->getLogic() << ")" << std::endl;
+        }
+        
+        // 添加声明的函数和变量
+        auto funcs = parser->getFunctions();
+        for (const auto& func : funcs) {
+            if (func->isFuncDec()) {
+                dumpFuncDec(func, ofs);
+                ofs << std::endl;
+            } else if (func->isFuncDef()) {
+                dumpFuncDef(func, ofs);
+                ofs << std::endl;
+            }
+        }
+        
+        // 添加变量声明
+        auto vars = parser->getVariables();
+        for (const auto& var : vars) {
+            if (var->isVar()) {
+                ofs << "(declare-const " << var->getName() << " " << var->getSort()->toString() << ")" << std::endl;
+            }
+        }
+        
+        // 导出断言
+        dumpSMTLIB2(assertions, ofs);
+        
+        // 添加(check-sat)命令以便Z3处理
+        ofs << "(check-sat)" << std::endl;
+        
+        ofs.close();
+        
+        std::cout << "已将解析后的SMT表达式写入: " << output_file << std::endl;
+        
+        // 检查等价性
+        if (check_equivalence(input_file, output_file)) {
+            std::cout << "验证成功: 原始文件和解析后输出的文件是等价的！" << std::endl;
+        } else {
+            std::cout << "验证失败: 原始文件和解析后输出的文件不等价。" << std::endl;
+        }
+    } else {
+        std::cout << "解析失败" << std::endl;
+        return 1;
+    }
+
+    return 0;
+}

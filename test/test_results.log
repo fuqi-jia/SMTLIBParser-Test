@@ -1,0 +1,323 @@
+SMTLIBParser 测试结果
+运行时间: Wed May 14 19:40:34 CST 2025
+----------------------------------------
+正在查找测试文件...
+找到 62 个测试文件.
+
+----------------------------------------
+测试文件: ./QF_BV/bench_11540.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/bench_11541.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/bench_12537.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/bvmul_10.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/byte_add_false.c.17.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/e2_3.c.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/e3_2.c.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/ext_con_004_008_0512.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/extensions.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/graycode.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/predicate_1217.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/predicate_1245.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/predicate_152.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/predicate_2077.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/predicate_82.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/simplePostAndPre.phx.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/square.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_BV/vlsat3_a00.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_FP/Float_div-main.smt2
+error: Unknown or unexptected symbol "#x7f" in line 468.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_FP/nan_double-main.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_FP/nan_float-main.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_FP/rem-has-solution-1745.smt2
+warning: "define-sort" command is safely ignored in line 17.
+error: Unknown or unexptected symbol "FPN" in line 18.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_FP/square_7_true-unreach-call-main.smt2
+error: Unknown or unexptected symbol "roundNearestTiesToEven" in line 13.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_FP/test_v5_r5_vr1_c1_s16138.smt2
+error: Unknown or unexptected symbol "fp" in line 14.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_FP/water_pid_true-unreach-call_true-termination.c_0.smt2
+error: Unknown or unexptected symbol "RoundingMode" in line 32.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_LIA/FISCHER10-10-fair.smt2
+[31m! 崩溃[0m - 段错误 (Segmentation fault)
+
+----------------------------------------
+测试文件: ./QF_LRA/Carpark2-ausgabe-8.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_LRA/Carpark2-t1-4.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_LRA/current_frame.base.smt2
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
+
+----------------------------------------
+测试文件: ./QF_LRA/good_frame_update.induction.smt2
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
+
+----------------------------------------
+测试文件: ./QF_LRA/p-DepotsNum_s8.msat.smt2
+[31m! 崩溃[0m - 段错误 (Segmentation fault)
+
+----------------------------------------
+测试文件: ./QF_LRA/pd_no_op_accs.induction.smt2
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
+
+----------------------------------------
+测试文件: ./QF_LRA/pd_not_sc_seen.base.smt2
+SMTLIBParser_Test: /mnt/e/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:510: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+[31m✗ 失败[0m - parse failed
+
+----------------------------------------
+测试文件: ./QF_LRA/simple_example_1-node2318.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/15.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/LeeJonesBen-Amram-POPL2001-Ex2_true-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/MC_09.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/SF_06.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/STC_0764.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/Swingers_false-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/aproveSMT8381733019786587689.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/term-4LNX6G.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NIA/term-G0osfI.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/InVarSynth_agroce_minmax.c_Iteration2_1.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/MulliganEconomicsModel0055a.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/MulliganEconomicsModel0055e.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-6-e-chunk-0134.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-6-e-chunk-0135.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-neg-4-e-chunk-0215.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-neg-4-e-chunk-0216.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-neg-6-e-chunk-0215.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/exp-361-neg-6-e-chunk-0216.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/huge_runtime_PRAY.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_NRA/pentagon.t2.c_Iteration12_Loop_3-pieceTemplate.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_S/cyclic-xy.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_S/instance00000.smt2
+error: Unknown or unexptected symbol "_" in line 16.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_S/instance00005.smt2
+error: Unknown or unexptected symbol "re.comp" in line 16.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_S/instance00011.smt2
+error: Unknown or unexptected symbol "re.opt" in line 16.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_S/instance00020.smt2
+error: Unknown or unexptected symbol "re.allchar" in line 16.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_S/lyndon-schuetzenberg-1.smt2
+error: Unknown or unexptected symbol "re.all" in line 23.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
+
+----------------------------------------
+测试文件: ./QF_S/noodles-unsat-3.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+----------------------------------------
+测试文件: ./QF_S/parikh.smt2
+parse success
+[32m✓ 成功[0m - parse success
+
+---------------------------------------- test_summary.log
+测试摘要:
+总测试文件数: 62
+[32m成功: 46[0m
+[31m失败: 14[0m
+[31m崩溃: 2[0m
+总耗时: 10 秒
+---------------------------------------- test_summary.log
