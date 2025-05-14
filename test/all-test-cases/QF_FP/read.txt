@@ -1,0 +1,18 @@
+water_pid_true-unreach-call_true-termination.c_0.smt2
+'error: Unknown or unexptected symbol "RoundingMode" in line 32.
+
+test_v5_r5_vr1_c1_s16138.smt2
+error: Unknown or unexptected symbol "fp" in line 14
+
+nan_float-main.smt2
+nan_double-main.smt2
+段错误(应该)
+
+square_7_true-unreach-call-main.smt2
+'error: Unknown or unexptected symbol "roundNearestTiesToEven" in line 13.
+
+Float_div-main.smt2
+error: Unknown or unexptected symbol "#x7f" in line 468.
+
+rem-has-solution-1745.smt2
+warning: "define-sort" command is safely ignored in line 17. error: Unknown or unexptected symbol "FPN" in line 18.

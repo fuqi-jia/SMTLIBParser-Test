@@ -1,0 +1,49 @@
+bench_11540.smt2
+答案错误，sat判定为unsat
+
+Sage2/bench_*.smt2
+有很多错误判定为unsat
+
+bench_11541.smt2 
+unknown
+
+bvmul_10.smt2
+unknown 约240s
+
+byte_add_false.c.17.smt2
+unknown 约60s
+
+e2_3.c.smt2
+unknown 10s左右
+
+e3_2.c.smt2
+unknown 200s左右
+
+extensions.smt2
+段错误
+
+graycode.smt2
+ext_con_004_008_0512.smt2
+unknown 比较慢，约400s
+
+predicate_82.smt2
+unknown，约450s
+
+predicate_152.smt2
+predicate_2077.smt2
+unknown 不到1s
+
+predicate_1217.smt2
+predicate_1245.smt2
+unknown 5s
+
+simplePostAndPre.phx.smt2
+部分变量unknown 
+约200s
+
+square.smt2
+unknown 约150s
+
+vlsat3_a00.smt2 
+unknown 约560s
+

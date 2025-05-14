@@ -1,0 +1,19 @@
+cyclic-xy.smt2
+noodles-unsat-3.smt2
+parikh.smt2
+段错误
+
+lyndon-schuetzenberg-1.smt2
+error: Unknown or unexptected symbol "re.all" in line 23.
+
+instance00000.smt2
+error: Unknown or unexptected symbol "_" in line 16.
+
+instance00005.smt2
+error: Unknown or unexptected symbol "re.comp" in line 16.
+
+instance00011.smt2
+error: Unknown or unexptected symbol "re.opt" in line 16.
+
+instance00020.smt2
+error: Unknown or unexptected symbol "re.allchar" in line 16.
