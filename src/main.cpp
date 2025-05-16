@@ -87,6 +87,13 @@ int main(int argc, char* argv[]) {
     // parse the input file
     if(parser->parse(input_file)) {
         std::cout << "parse success" << std::endl;
+        // Retrieve the parsed assertions
+        auto assertions = parser->getAssertions();
+
+        // Output the assertions
+        for(auto constraint: assertions){
+            std::cout << dumpSMTLIB2(constraint) << std::endl;
+        }
     } else {
         std::cout << "parse failed" << std::endl;
     }
