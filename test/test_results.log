@@ -1,5 +1,5 @@
 SMTLIBParser 测试结果
-运行时间: Fri May 16 19:07:46 CST 2025
+运行时间: Fri May 16 20:41:16 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 63 个测试文件.
@@ -757,8 +757,8 @@ SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBPar
 
 ----------------------------------------
 测试文件: ./QF_BV/extensions.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+error: Kind mismatch of command "Type mismatch in bv_and" in line 45.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
 测试文件: ./QF_BV/graycode.smt2
@@ -2272,8 +2272,8 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_FP/Float_div-main.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/op_parser.cpp:545: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
-[31m✗ 失败[0m - parse failed
+error: Unknown or unexptected symbol "Type mismatch in equality" in line 935.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
 测试文件: ./QF_FP/nan_double-main.smt2
@@ -2299,9 +2299,8 @@ error: Unknown or unexptected symbol "FPN" in line 35.
 
 ----------------------------------------
 测试文件: ./QF_FP/square_7_true-unreach-call-main.smt2
-parse success
-(= |c::main::main::1::IN@1!0&0#0| |c::main::main::1::x@1!0&0#1|)
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+error: Kind mismatch of command "Type mismatch in fp_mul" in line 35.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
 测试文件: ./QF_FP/test_v5_r5_vr1_c1_s16138.smt2
@@ -2369,9 +2368,8 @@ false
 
 ----------------------------------------
 测试文件: ./QF_NIA/15.smt2
-parse success
-(or (= (+ (* S0 5) (* S1 5)) X4) (= (- (* S0 5) S1) X4) (= (+ (* S1 101) (* S0 5)) X4) (= (+ (* S1 411) (* S0 27)) X4) (= (- S0 (* S1 411)) X4) (= (- (* S0 101) (* S1 5)) X4) (= (- (* S0 27) (* S1 411)) X4) (= (- (* S0 5) (* S1 27)) X4) (= (- (* S0 5) (* S1 411)) X4) (= (+ (* S0 27) (* S1 27)) X4) (= (- S0 (* S1 5)) X4) (= X4 (- (* S0 411) (* S1 101))) (= (+ (* S0 411) S1) X4) (= (- (* S0 411) (* S1 5)) X4) (= (- (* S0 27) (* S1 101)) X4) (= (+ S1 (* S0 5)) X4) (= (- (* S0 5) (* S1 5)) X4) (= (+ S1 S0) X4) (= (- (* S0 411) (* S1 411)) X4) (= X4 (+ (* S0 27) (* S1 101))) (= (+ (* S1 27) (* S0 5)) X4) (= (- (* S0 101) (* S1 411)) X4) (= (- S0 (* S1 27)) X4) (= (+ S1 (* S0 101)) X4) (= (- (* S0 411) (* S1 27)) X4) (= (+ (* S1 411) (* S0 5)) X4) (= (- (* S0 5) (* S1 101)) X4) (= (+ (* S1 411) (* S0 411)) X4) (= (- (* S0 27) (* S1 27)) X4) (= (- (* S0 101) S1) X4) (= (- (* S0 27) S1) X4) (= (- (* S0 101) (* S1 101)) X4) (= (- (* S0 101) (* S1 27)) X4) (= (- S0 S1) X4) (= (+ (* S0 27) S1) X4) (= (- S0 (* S1 101)) X4) (= (+ (* S1 411) (* S0 101)) X4) (= (- (* S0 27) (* S1 5)) X4) (= (+ (* S1 101) (* S0 101)) X4) (= (- (* S0 411) S1) X4))
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+error: Wrong number of parameters of "AND on non-boolean" in line 147.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
 测试文件: ./QF_NIA/LeeJonesBen-Amram-POPL2001-Ex2_true-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2
@@ -6870,17 +6868,19 @@ parse success
 ----------------------------------------
 测试文件: ./QF_S/instance00000.smt2
 parse success
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+(not (str.in_re X (re.++ (str.to_re "SK") (re.union (re.++ ((_ re.loop 2 2) (re.range "0" "9")) (str.to_re " ") ((_ re.loop 4 4) (re.range "0" "9")) (str.to_re " ") ((_ re.loop 4 4) (re.range "0" "9")) (str.to_re " ") ((_ re.loop 4 4) (re.range "0" "9")) (str.to_re " ") ((_ re.loop 4 4) (re.range "0" "9")) (str.to_re " ") ((_ re.loop 4 4) (re.range "0" "9"))) (re.++ ((_ re.loop 22 22) (re.range "0" "9")) (str.to_re "\u{a}"))))))
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/instance00005.smt2
 parse success
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+(not (str.in_re X (re.++ (str.to_re "/filename=") (re.* (re.comp (str.to_re "\u{a}"))) (str.to_re ".pmd/i\u{a}"))))
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_S/instance00011.smt2
-parse success
-[31m! 崩溃[0m - 段错误 (Segmentation fault)
+error: Kind mismatch of command "Type mismatch in reg_concat" in line 31.
+[33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ----------------------------------------
 测试文件: ./QF_S/instance00020.smt2
@@ -6927,8 +6927,8 @@ parse success
 ---------------------------------------- test_summary.log
 测试摘要:
 总测试文件数: 63
-[32m成功: 44[0m
-[31m失败: 14[0m
-[31m崩溃: 5[0m
-总耗时: 9.724881070 秒
+[32m成功: 46[0m
+[31m失败: 17[0m
+[31m崩溃: 0[0m
+总耗时: 10.125434577 秒
 ---------------------------------------- test_summary.log
