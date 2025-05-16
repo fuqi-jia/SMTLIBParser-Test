@@ -1,5 +1,5 @@
 SMTLIBParser 测试摘要
-运行时间: Fri May 16 21:25:55 CST 2025
+运行时间: Fri May 16 21:38:14 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 63 个测试文件.
@@ -8,73 +8,73 @@ SMTLIBParser 测试摘要
 ----------------------------------------
 | 文件 | 结果 | 耗时(秒) |
 | ---- | ---- | -------- |
-| ./QF_BV/bench_11540.smt2 | ✓ 成功 | .063154590 |
-| ./QF_BV/bench_11541.smt2 | ✓ 成功 | .134903320 |
-| ./QF_BV/bench_12537.smt2 | ✓ 成功 | .073007167 |
-| ./QF_BV/bvmul_10.smt2 | ✓ 成功 | .040489870 |
-| ./QF_BV/byte_add_false.c.17.smt2 | ✓ 成功 | 4.895694072 |
-| ./QF_BV/e2_3.c.smt2 | ✓ 成功 | .042329616 |
-| ./QF_BV/e3_2.c.smt2 | ✓ 成功 | .052904352 |
-| ./QF_BV/ext_con_004_008_0512.smt2 | ✓ 成功 | .040625675 |
-| ./QF_BV/extensions.smt2 | ✓ 成功 | .038981199 |
-| ./QF_BV/graycode.smt2 | ✓ 成功 | .046613483 |
-| ./QF_BV/predicate_1217.smt2 | ✓ 成功 | .073399229 |
-| ./QF_BV/predicate_1245.smt2 | ✓ 成功 | .077218489 |
-| ./QF_BV/predicate_152.smt2 | ✓ 成功 | .039028327 |
-| ./QF_BV/predicate_2077.smt2 | ✓ 成功 | .040307964 |
-| ./QF_BV/predicate_82.smt2 | ✓ 成功 | .061298368 |
-| ./QF_BV/simplePostAndPre.phx.smt2 | ✓ 成功 | .043757608 |
-| ./QF_BV/square.smt2 | ✓ 成功 | .039924137 |
-| ./QF_BV/vlsat3_a00.smt2 | ✓ 成功 | .068581890 |
-| ./QF_FP/Float_div-main.smt2 | ? 未知 | .032899649 |
-| ./QF_FP/nan_double-main.smt2 | ✓ 成功 | .034745414 |
-| ./QF_FP/nan_float-main.smt2 | ✓ 成功 | .038873408 |
-| ./QF_FP/rem-has-solution-1745.smt2 | ? 未知 | .029534096 |
-| ./QF_FP/square_7_true-unreach-call-main.smt2 | ? 未知 | .034424790 |
-| ./QF_FP/test_v5_r5_vr1_c1_s16138.smt2 | ? 未知 | .035591548 |
-| ./QF_FP/water_pid_true-unreach-call_true-termination.c_0.smt2 | ? 未知 | .031130666 |
-| ./QF_LIA/FISCHER10-10-fair.smt2 | ✓ 成功 | .265854535 |
-| ./QF_LRA/Carpark2-ausgabe-8.smt2 | ✓ 成功 | .075685328 |
-| ./QF_LRA/Carpark2-t1-4.smt2 | ✓ 成功 | .055421706 |
-| ./QF_LRA/current_frame.base.smt2 | ✓ 成功 | .051969179 |
-| ./QF_LRA/good_frame_update.induction.smt2 | ✓ 成功 | .046395472 |
-| ./QF_LRA/p-DepotsNum_s8.msat.smt2 | ✓ 成功 | .235827629 |
-| ./QF_LRA/pd_no_op_accs.induction.smt2 | ✓ 成功 | .042591290 |
-| ./QF_LRA/pd_not_sc_seen.base.smt2 | ✓ 成功 | .041675159 |
-| ./QF_LRA/simple_example_1-node2318.smt2 | ✓ 成功 | .035916731 |
-| ./QF_NIA/15.smt2 | ? 未知 | .036509693 |
-| ./QF_NIA/LeeJonesBen-Amram-POPL2001-Ex2_true-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2 | ✓ 成功 | .061335208 |
-| ./QF_NIA/MC_09.smt2 | ✓ 成功 | .074253603 |
-| ./QF_NIA/SF_06.smt2 | ✓ 成功 | .044610699 |
-| ./QF_NIA/STC_0764.smt2 | ✓ 成功 | .040769425 |
-| ./QF_NIA/Swingers_false-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2 | ✓ 成功 | .047324680 |
-| ./QF_NIA/aproveSMT8381733019786587689.smt2 | ✓ 成功 | .049978992 |
-| ./QF_NIA/term-4LNX6G.smt2 | ✓ 成功 | .036927372 |
-| ./QF_NIA/term-G0osfI.smt2 | ✓ 成功 | .037802477 |
-| ./QF_NRA/InVarSynth_agroce_minmax.c_Iteration2_1.smt2 | ✓ 成功 | .047135100 |
-| ./QF_NRA/MulliganEconomicsModel0055a.smt2 | ✓ 成功 | .038341829 |
-| ./QF_NRA/MulliganEconomicsModel0055e.smt2 | ✓ 成功 | .040585753 |
-| ./QF_NRA/exp-361-6-e-chunk-0134.smt2 | ✓ 成功 | .039001470 |
-| ./QF_NRA/exp-361-6-e-chunk-0135.smt2 | ✓ 成功 | .037755074 |
-| ./QF_NRA/exp-361-neg-4-e-chunk-0215.smt2 | ✓ 成功 | .037939597 |
-| ./QF_NRA/exp-361-neg-4-e-chunk-0216.smt2 | ✓ 成功 | .038289476 |
-| ./QF_NRA/exp-361-neg-6-e-chunk-0215.smt2 | ✓ 成功 | .039675487 |
-| ./QF_NRA/exp-361-neg-6-e-chunk-0216.smt2 | ✓ 成功 | .035597382 |
-| ./QF_NRA/huge_runtime_PRAY.smt2 | ✓ 成功 | .044072566 |
-| ./QF_NRA/pentagon.t2.c_Iteration12_Loop_3-pieceTemplate.smt2 | ✓ 成功 | .070935957 |
-| ./QF_S/cyclic-xy.smt2 | ✓ 成功 | .036151230 |
-| ./QF_S/instance00000.smt2 | ✓ 成功 | .036923218 |
-| ./QF_S/instance00005.smt2 | ✓ 成功 | .037330085 |
-| ./QF_S/instance00011.smt2 | ? 未知 | .035255752 |
-| ./QF_S/instance00020.smt2 | ✓ 成功 | .034243591 |
-| ./QF_S/lyndon-schuetzenberg-1.smt2 | ✓ 成功 | .036450810 |
-| ./QF_S/noodles-unsat-3.smt2 | ✓ 成功 | .036818975 |
-| ./QF_S/parikh.smt2 | ✓ 成功 | .038554318 |
-| ./formula.smt2 | ✓ 成功 | .033565305 |
+| ./QF_BV/bench_11540.smt2 | ✓ 成功 | .067203900 |
+| ./QF_BV/bench_11541.smt2 | ✓ 成功 | .187770547 |
+| ./QF_BV/bench_12537.smt2 | ✓ 成功 | .074319974 |
+| ./QF_BV/bvmul_10.smt2 | ✓ 成功 | .042387847 |
+| ./QF_BV/byte_add_false.c.17.smt2 | ✓ 成功 | 3.562280758 |
+| ./QF_BV/e2_3.c.smt2 | ✓ 成功 | .047436985 |
+| ./QF_BV/e3_2.c.smt2 | ✓ 成功 | .060299194 |
+| ./QF_BV/ext_con_004_008_0512.smt2 | ✓ 成功 | .049890674 |
+| ./QF_BV/extensions.smt2 | ✓ 成功 | .044554151 |
+| ./QF_BV/graycode.smt2 | ✓ 成功 | .059915789 |
+| ./QF_BV/predicate_1217.smt2 | ✓ 成功 | .091468887 |
+| ./QF_BV/predicate_1245.smt2 | ✓ 成功 | .077343084 |
+| ./QF_BV/predicate_152.smt2 | ✓ 成功 | .045709242 |
+| ./QF_BV/predicate_2077.smt2 | ✓ 成功 | .040360397 |
+| ./QF_BV/predicate_82.smt2 | ✓ 成功 | .063733322 |
+| ./QF_BV/simplePostAndPre.phx.smt2 | ✓ 成功 | .045179943 |
+| ./QF_BV/square.smt2 | ✓ 成功 | .036919806 |
+| ./QF_BV/vlsat3_a00.smt2 | ✓ 成功 | .068546617 |
+| ./QF_FP/Float_div-main.smt2 | ? 未知 | .039595896 |
+| ./QF_FP/nan_double-main.smt2 | ✓ 成功 | .040584351 |
+| ./QF_FP/nan_float-main.smt2 | ✓ 成功 | .038043670 |
+| ./QF_FP/rem-has-solution-1745.smt2 | ? 未知 | .039669080 |
+| ./QF_FP/square_7_true-unreach-call-main.smt2 | ? 未知 | .040847072 |
+| ./QF_FP/test_v5_r5_vr1_c1_s16138.smt2 | ? 未知 | .042774084 |
+| ./QF_FP/water_pid_true-unreach-call_true-termination.c_0.smt2 | ? 未知 | .036256126 |
+| ./QF_LIA/FISCHER10-10-fair.smt2 | ✓ 成功 | .279883779 |
+| ./QF_LRA/Carpark2-ausgabe-8.smt2 | ✓ 成功 | .076502238 |
+| ./QF_LRA/Carpark2-t1-4.smt2 | ✓ 成功 | .057776088 |
+| ./QF_LRA/current_frame.base.smt2 | ✓ 成功 | .053724941 |
+| ./QF_LRA/good_frame_update.induction.smt2 | ✓ 成功 | .049249011 |
+| ./QF_LRA/p-DepotsNum_s8.msat.smt2 | ✓ 成功 | .242056139 |
+| ./QF_LRA/pd_no_op_accs.induction.smt2 | ✓ 成功 | .046406308 |
+| ./QF_LRA/pd_not_sc_seen.base.smt2 | ✓ 成功 | .045650988 |
+| ./QF_LRA/simple_example_1-node2318.smt2 | ✓ 成功 | .027131684 |
+| ./QF_NIA/15.smt2 | ? 未知 | .034655272 |
+| ./QF_NIA/LeeJonesBen-Amram-POPL2001-Ex2_true-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2 | ✓ 成功 | .057139009 |
+| ./QF_NIA/MC_09.smt2 | ✓ 成功 | .075460967 |
+| ./QF_NIA/SF_06.smt2 | ✓ 成功 | .044736942 |
+| ./QF_NIA/STC_0764.smt2 | ✓ 成功 | .037007773 |
+| ./QF_NIA/Swingers_false-termination.c_Iteration1_Loop+nonterminationTemplate_0.smt2 | ✓ 成功 | .042102832 |
+| ./QF_NIA/aproveSMT8381733019786587689.smt2 | ✓ 成功 | .049986154 |
+| ./QF_NIA/term-4LNX6G.smt2 | ✓ 成功 | .039396857 |
+| ./QF_NIA/term-G0osfI.smt2 | ✓ 成功 | .037975858 |
+| ./QF_NRA/InVarSynth_agroce_minmax.c_Iteration2_1.smt2 | ✓ 成功 | .045937926 |
+| ./QF_NRA/MulliganEconomicsModel0055a.smt2 | ✓ 成功 | .037862497 |
+| ./QF_NRA/MulliganEconomicsModel0055e.smt2 | ✓ 成功 | .038665900 |
+| ./QF_NRA/exp-361-6-e-chunk-0134.smt2 | ✓ 成功 | .040083072 |
+| ./QF_NRA/exp-361-6-e-chunk-0135.smt2 | ✓ 成功 | .037348125 |
+| ./QF_NRA/exp-361-neg-4-e-chunk-0215.smt2 | ✓ 成功 | .034964126 |
+| ./QF_NRA/exp-361-neg-4-e-chunk-0216.smt2 | ✓ 成功 | .037971192 |
+| ./QF_NRA/exp-361-neg-6-e-chunk-0215.smt2 | ✓ 成功 | .040355567 |
+| ./QF_NRA/exp-361-neg-6-e-chunk-0216.smt2 | ✓ 成功 | .035475045 |
+| ./QF_NRA/huge_runtime_PRAY.smt2 | ✓ 成功 | .038532924 |
+| ./QF_NRA/pentagon.t2.c_Iteration12_Loop_3-pieceTemplate.smt2 | ✓ 成功 | .073840171 |
+| ./QF_S/cyclic-xy.smt2 | ✓ 成功 | .037525198 |
+| ./QF_S/instance00000.smt2 | ✓ 成功 | .036940657 |
+| ./QF_S/instance00005.smt2 | ✓ 成功 | .035165707 |
+| ./QF_S/instance00011.smt2 | ✓ 成功 | .035192562 |
+| ./QF_S/instance00020.smt2 | ✓ 成功 | .036442512 |
+| ./QF_S/lyndon-schuetzenberg-1.smt2 | ✓ 成功 | .035966578 |
+| ./QF_S/noodles-unsat-3.smt2 | ✓ 成功 | .038317134 |
+| ./QF_S/parikh.smt2 | ✓ 成功 | .035533174 |
+| ./formula.smt2 | ✓ 成功 | .034361785 |
 
 测试摘要:
 总测试文件数: 63
-成功: 56
-失败: 7
+成功: 57
+失败: 6
 崩溃: 0
-总耗时: 8.184891080 秒
+总耗时: 7.026416088 秒
