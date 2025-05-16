@@ -1,5 +1,5 @@
 SMTLIBParser 测试结果
-运行时间: Fri May 16 20:41:16 CST 2025
+运行时间: Fri May 16 20:47:16 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 63 个测试文件.
@@ -742,18 +742,21 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/e2_3.c.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+def_800
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/e3_2.c.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+def_1788
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/ext_con_004_008_0512.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+(and (or (and (and (= (concat dummy3 ((_ extract 159 128) v1)) ((_ extract 175 128) a)) (= (concat ((_ extract 191 160) v1) dummy3) ((_ extract 191 144) a))) (and (= ((_ extract 511 464) a) (concat ((_ extract 511 480) v1) dummy8)) (= (concat dummy8 ((_ extract 479 448) v1)) ((_ extract 495 448) a))) (and (= ((_ extract 447 400) a) (concat ((_ extract 447 416) v1) dummy7)) (= (concat dummy7 ((_ extract 415 384) v1)) ((_ extract 431 384) a))) (and (= ((_ extract 111 64) a) (concat dummy2 ((_ extract 95 64) v1))) (= ((_ extract 127 80) a) (concat ((_ extract 127 96) v1) dummy2))) (and (= (concat ((_ extract 255 224) v1) dummy4) ((_ extract 255 208) a)) (= ((_ extract 239 192) a) (concat dummy4 ((_ extract 223 192) v1)))) (and (= ((_ extract 319 272) a) (concat ((_ extract 319 288) v1) dummy5)) (= ((_ extract 303 256) a) (concat dummy5 ((_ extract 287 256) v1)))) (and (= ((_ extract 47 0) a) (concat dummy1 ((_ extract 31 0) v1))) (= (concat ((_ extract 63 32) v1) dummy1) ((_ extract 63 16) a))) (and (= ((_ extract 367 320) a) (concat dummy6 ((_ extract 351 320) v1))) (= ((_ extract 383 336) a) (concat ((_ extract 383 352) v1) dummy6)))) (and (and (= (concat ((_ extract 191 160) v4) dummy3) ((_ extract 191 144) a)) (= ((_ extract 175 128) a) (concat dummy3 ((_ extract 159 128) v4)))) (and (= ((_ extract 303 256) a) (concat dummy5 ((_ extract 287 256) v4))) (= (concat ((_ extract 319 288) v4) dummy5) ((_ extract 319 272) a))) (and (= ((_ extract 47 0) a) (concat dummy1 ((_ extract 31 0) v4))) (= (concat ((_ extract 63 32) v4) dummy1) ((_ extract 63 16) a))) (and (= ((_ extract 111 64) a) (concat dummy2 ((_ extract 95 64) v4))) (= ((_ extract 127 80) a) (concat ((_ extract 127 96) v4) dummy2))) (and (= (concat dummy6 ((_ extract 351 320) v4)) ((_ extract 367 320) a)) (= (concat ((_ extract 383 352) v4) dummy6) ((_ extract 383 336) a))) (and (= (concat dummy8 ((_ extract 479 448) v4)) ((_ extract 495 448) a)) (= ((_ extract 511 464) a) (concat ((_ extract 511 480) v4) dummy8))) (and (= ((_ extract 447 400) a) (concat ((_ extract 447 416) v4) dummy7)) (= (concat dummy7 ((_ extract 415 384) v4)) ((_ extract 431 384) a))) (and (= ((_ extract 239 192) a) (concat dummy4 ((_ extract 223 192) v4))) (= (concat ((_ extract 255 224) v4) dummy4) ((_ extract 255 208) a)))) (and (and (= ((_ extract 319 272) a) (concat ((_ extract 319 288) v2) dummy5)) (= ((_ extract 303 256) a) (concat dummy5 ((_ extract 287 256) v2)))) (and (= (concat ((_ extract 255 224) v2) dummy4) ((_ extract 255 208) a)) (= (concat dummy4 ((_ extract 223 192) v2)) ((_ extract 239 192) a))) (and (= (concat ((_ extract 127 96) v2) dummy2) ((_ extract 127 80) a)) (= ((_ extract 111 64) a) (concat dummy2 ((_ extract 95 64) v2)))) (and (= (concat dummy1 ((_ extract 31 0) v2)) ((_ extract 47 0) a)) (= (concat ((_ extract 63 32) v2) dummy1) ((_ extract 63 16) a))) (and (= (concat dummy3 ((_ extract 159 128) v2)) ((_ extract 175 128) a)) (= (concat ((_ extract 191 160) v2) dummy3) ((_ extract 191 144) a))) (and (= ((_ extract 383 336) a) (concat ((_ extract 383 352) v2) dummy6)) (= ((_ extract 367 320) a) (concat dummy6 ((_ extract 351 320) v2)))) (and (= (concat dummy7 ((_ extract 415 384) v2)) ((_ extract 431 384) a)) (= ((_ extract 447 400) a) (concat ((_ extract 447 416) v2) dummy7))) (and (= ((_ extract 511 464) a) (concat ((_ extract 511 480) v2) dummy8)) (= (concat dummy8 ((_ extract 479 448) v2)) ((_ extract 495 448) a)))) (and (and (= (concat ((_ extract 63 32) v3) dummy1) ((_ extract 63 16) a)) (= ((_ extract 47 0) a) (concat dummy1 ((_ extract 31 0) v3)))) (and (= ((_ extract 447 400) a) (concat ((_ extract 447 416) v3) dummy7)) (= (concat dummy7 ((_ extract 415 384) v3)) ((_ extract 431 384) a))) (and (= ((_ extract 383 336) a) (concat ((_ extract 383 352) v3) dummy6)) (= (concat dummy6 ((_ extract 351 320) v3)) ((_ extract 367 320) a))) (and (= (concat dummy8 ((_ extract 479 448) v3)) ((_ extract 495 448) a)) (= ((_ extract 511 464) a) (concat ((_ extract 511 480) v3) dummy8))) (and (= (concat dummy2 ((_ extract 95 64) v3)) ((_ extract 111 64) a)) (= (concat ((_ extract 127 96) v3) dummy2) ((_ extract 127 80) a))) (and (= (concat dummy3 ((_ extract 159 128) v3)) ((_ extract 175 128) a)) (= ((_ extract 191 144) a) (concat ((_ extract 191 160) v3) dummy3))) (and (= (concat dummy4 ((_ extract 223 192) v3)) ((_ extract 239 192) a)) (= (concat ((_ extract 255 224) v3) dummy4) ((_ extract 255 208) a))) (and (= (concat ((_ extract 319 288) v3) dummy5) ((_ extract 319 272) a)) (= ((_ extract 303 256) a) (concat dummy5 ((_ extract 287 256) v3)))))) (or (not (= ((_ extract 367 352) v2) ((_ extract 351 336) v2))) (not (= ((_ extract 223 208) v2) ((_ extract 239 224) v2))) (not (= ((_ extract 479 464) v2) ((_ extract 495 480) v2))) (not (= ((_ extract 111 96) v2) ((_ extract 95 80) v2))) (not (= ((_ extract 415 400) v2) ((_ extract 431 416) v2))) (not (= ((_ extract 31 16) v2) ((_ extract 47 32) v2))) (not (= ((_ extract 159 144) v2) ((_ extract 175 160) v2))) (not (= ((_ extract 287 272) v2) ((_ extract 303 288) v2)))) (or (not (= ((_ extract 31 16) v4) ((_ extract 47 32) v4))) (not (= ((_ extract 351 336) v4) ((_ extract 367 352) v4))) (not (= ((_ extract 223 208) v4) ((_ extract 239 224) v4))) (not (= ((_ extract 111 96) v4) ((_ extract 95 80) v4))) (not (= ((_ extract 303 288) v4) ((_ extract 287 272) v4))) (not (= ((_ extract 479 464) v4) ((_ extract 495 480) v4))) (not (= ((_ extract 159 144) v4) ((_ extract 175 160) v4))) (not (= ((_ extract 431 416) v4) ((_ extract 415 400) v4)))) (or (not (= ((_ extract 351 336) v1) ((_ extract 367 352) v1))) (not (= ((_ extract 31 16) v1) ((_ extract 47 32) v1))) (not (= ((_ extract 159 144) v1) ((_ extract 175 160) v1))) (not (= ((_ extract 95 80) v1) ((_ extract 111 96) v1))) (not (= ((_ extract 223 208) v1) ((_ extract 239 224) v1))) (not (= ((_ extract 479 464) v1) ((_ extract 495 480) v1))) (not (= ((_ extract 431 416) v1) ((_ extract 415 400) v1))) (not (= ((_ extract 287 272) v1) ((_ extract 303 288) v1)))) (or (not (= ((_ extract 111 96) v3) ((_ extract 95 80) v3))) (not (= ((_ extract 159 144) v3) ((_ extract 175 160) v3))) (not (= ((_ extract 431 416) v3) ((_ extract 415 400) v3))) (not (= ((_ extract 495 480) v3) ((_ extract 479 464) v3))) (not (= ((_ extract 223 208) v3) ((_ extract 239 224) v3))) (not (= ((_ extract 287 272) v3) ((_ extract 303 288) v3))) (not (= ((_ extract 47 32) v3) ((_ extract 31 16) v3))) (not (= ((_ extract 367 352) v3) ((_ extract 351 336) v3)))))
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/extensions.smt2
@@ -768,28 +771,65 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/predicate_1217.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
+SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:781: std::string SMTLIBParser::bvExtract(const std::string&, const Integer&, const Integer&): Assertion `i <= j' failed.
 [31m✗ 失败[0m - parse failed
 
 ----------------------------------------
 测试文件: ./QF_BV/predicate_1245.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
+SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:781: std::string SMTLIBParser::bvExtract(const std::string&, const Integer&, const Integer&): Assertion `i <= j' failed.
 [31m✗ 失败[0m - parse failed
 
 ----------------------------------------
 测试文件: ./QF_BV/predicate_152.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+(not (= ref!19182 #b1))
+(bvuge (bvadd ref!19244 #b0000000000000000011111111110000010001101110111000111111101000000) #b0000000000000000011111111110000010001101110111000111111101000000)
+(bvule (bvadd ref!19244 #b0000000000000000011111111110000010001101110111000111111101000000) #b0000000000000000011111111110000010001101110111000111111110100011)
+(= #b0 ref!19257)
+(bvuge (bvadd #b0000000000000000011111111110000010001101110111000111111101000000 ref!19300) #b0000000000000000011111111110000010001101110111000111111101000000)
+(bvule (bvadd #b0000000000000000011111111110000010001101110111000111111101000000 ref!19300) #b0000000000000000011111111110000010001101110111000111111110100011)
+(= #b0 ref!19313)
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/predicate_2077.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+(bvuge (bvadd ref!99200 #b0000000000000000011111111110110111100011011000001110111101000000) #b0000000000000000011111111110110111100011011000001110111101000000)
+(bvule (bvadd ref!99200 #b0000000000000000011111111110110111100011011000001110111101000000) #b0000000000000000011111111110110111100011011000001110111110100011)
+(= #b0 ref!99213)
+(bvuge (bvadd ref!99256 #b0000000000000000011111111110110111100011011000001110111101000000) #b0000000000000000011111111110110111100011011000001110111101000000)
+(bvule (bvadd ref!99256 #b0000000000000000011111111110110111100011011000001110111101000000) #b0000000000000000011111111110110111100011011000001110111110100011)
+(= #b0 ref!99269)
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/predicate_82.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+(= #b0 ref!8699)
+(= #b0 ref!8711)
+(not (= #b1 ref!8738))
+(not (= #b1 ref!8747))
+(= #b0 ref!8784)
+(not (= #b1 ref!8794))
+(= #b0 ref!8842)
+(not (= ref!8852 #b1))
+(= #b0 ref!9007)
+(= #b0 ref!9016)
+(not (= #b1 ref!9043))
+(not (= ref!9052 #b1))
+(= #b0 ref!9089)
+(not (= #b1 ref!9099))
+(= #b0 ref!9147)
+(not (= ref!9157 #b1))
+(= #b0 ref!10188)
+(not (= (bvor ref!10221 ref!10222) #b1))
+(not (= ref!10270 #b1))
+(not (= #b1 ref!10308))
+(= ref!10387 ref!10385)
+(not (= ref!10400 ref!10398))
+(= #b0 (bvor ref!10428 ref!10427))
+(= ref!10449 #b1)
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/simplePostAndPre.phx.smt2
@@ -799,8 +839,9 @@ parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/square.smt2
-SMTLIBParser_Test: /mnt/d/D_Study/ISCAS/projects/SMT/SMTLIBParser-Test/SMTLIBParser/src/util.cpp:775: std::string SMTLIBParser::bvConcat(const std::string&, const std::string&): Assertion `bv1[0] == '#' && bv1[1] == 'b'' failed.
-[31m✗ 失败[0m - parse failed
+parse success
+def_423
+[32m✓ 成功[0m - parse success
 
 ----------------------------------------
 测试文件: ./QF_BV/vlsat3_a00.smt2
@@ -6927,8 +6968,8 @@ parse success
 ---------------------------------------- test_summary.log
 测试摘要:
 总测试文件数: 63
-[32m成功: 46[0m
-[31m失败: 17[0m
+[32m成功: 53[0m
+[31m失败: 10[0m
 [31m崩溃: 0[0m
-总耗时: 10.125434577 秒
+总耗时: 8.596142213 秒
 ---------------------------------------- test_summary.log

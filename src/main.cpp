@@ -91,9 +91,9 @@ int main(int argc, char* argv[]) {
         auto assertions = parser->getAssertions();
 
         // Output the assertions
-        for(auto constraint: assertions){
-            std::cout << dumpSMTLIB2(constraint) << std::endl;
-        }
+        // for(auto constraint: assertions){
+        //     std::cout << dumpSMTLIB2(constraint) << std::endl;
+        // }
     } else {
         std::cout << "parse failed" << std::endl;
     }
