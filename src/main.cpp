@@ -69,13 +69,13 @@ void test_construction() {
 }
 
 int main(int argc, char* argv[]) {
-    test_parser();
+    // test_parser();
 
-    test_construction();
+    // test_construction();
 
-    test_evaluator();
+    // test_evaluator();
 
-    return 0;
+    // return 0;
 
     // the input parser
     std::shared_ptr<SMTLIBParser::Parser> parser = 
