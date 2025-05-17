@@ -89,6 +89,15 @@ int main(int argc, char* argv[]) {
         std::cout << "parse success" << std::endl;
         // Retrieve the parsed assertions
         auto assertions = parser->getAssertions();
+        auto cnf = parser->toCNF(assertions);
+        std::cout << "CNF: " << std::endl;
+        parser->toString(cnf);
+        auto dnf = parser->toDNF(assertions);
+        std::cout << "DNF: " << std::endl;
+        parser->toString(dnf);
+        auto nnf = parser->toNNF(assertions);
+        std::cout << "NNF: " << std::endl;
+        parser->toString(nnf);
 
         // Output the assertions
         // for(auto constraint: assertions){
