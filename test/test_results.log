@@ -1,8 +1,8 @@
 SMTLIBParser 测试结果
-运行时间: Mon May 19 18:21:25 CST 2025
+运行时间: Tue May 20 21:47:44 CST 2025
 ----------------------------------------
 正在查找测试文件...
-找到 67 个测试文件.
+找到 68 个测试文件.
 
 ----------------------------------------
 测试文件: ./QF_BV/bench_11540.smt2
@@ -7236,11 +7236,18 @@ assertions:
 (<= y pi)
 [32m✓ 成功[0m - parse success
 
+----------------------------------------
+测试文件: ./test_let.smt2
+parse success
+assertions: 
+(and (and (and (and (<= 0.0 instance.y__AT0@0) (<= instance.y__AT0@0 0.3000000000000000000000000000000000000006)) (and (<= 0.5000000000000000000000000000000000000000 instance.x__AT0@0) (<= instance.x__AT0@0 0.6999999999999999999999999999999999999994))) (= 0.0 time__AT0@0)) (and (and (= (not event_is_timed__AT0@0) event_is_timed__AT0@1) (and (or (not (and (not instance.EVENT.1__AT0@0) (not instance.EVENT.0__AT0@0))) (and (= instance.y__AT0@1 instance.y__AT0@0) (= instance.x__AT0@0 instance.x__AT0@1))) (and (and (and (or (not instance.EVENT.1__AT0@0) (<= time__AT0@0 time__AT0@1)) (= event_is_timed__AT0@0 instance.EVENT.1__AT0@0)) (or instance.EVENT.1__AT0@0 (= time__AT0@0 time__AT0@1))) (or (and (or (not instance.EVENT.1__AT0@0) (and (and (or (distinct time__AT0@0 time__AT0@1) (and (= instance.y__AT0@1 instance.y__AT0@0) (= instance.x__AT0@0 instance.x__AT0@1))) (and (= 0.0 (+ (+ (* (- 1) (* instance.y__AT0@1 instance.x__AT0@1)) (* (* (+ (* (* instance.x__AT0@0 instance.y__AT0@0) (- 1)) instance.x__AT0@0) (exp (+ (* time__AT0@0 (- 1)) time__AT0@1))) (- 1))) instance.x__AT0@1)) (= instance.y__AT0@1 (* instance.y__AT0@0 (exp (+ (* time__AT0@0 (- 1)) time__AT0@1)))))) (<= time__AT0@0 time__AT0@1))) (or instance.EVENT.1__AT0@0 (= time__AT0@0 time__AT0@1))) (and (not instance.EVENT.1__AT0@0) (not instance.EVENT.0__AT0@0)))))) (or (not instance.EVENT.1__AT0@0) (not instance.EVENT.0__AT0@0))) (and (and (and (<= (- 1) instance.x__AT0@1) (<= instance.x__AT0@1 (- 0.8000000000000000000000000000000000000006))) (<= instance.y__AT0@1 (- 0.6999999999999999999999999999999999999994))) (<= (- 1) instance.y__AT0@1)))
+[32m✓ 成功[0m - parse success
+
 ---------------------------------------- test_summary.log
 测试摘要:
-总测试文件数: 67
-[32m成功: 61[0m
+总测试文件数: 68
+[32m成功: 62[0m
 [31m失败: 6[0m
 [31m崩溃: 0[0m
-总耗时: 10.416370405 秒
+总耗时: 9.736370940 秒
 ---------------------------------------- test_summary.log
