@@ -11,8 +11,12 @@
 (define-fun dash () String "-")
 
 ;---------- 2. 自定义函数接口 ----------
-(declare-fun numSplits (String String) Int)
-(declare-fun splitAt   (String String Int) String)
+;(declare-fun numSplits (String String) Int)
+;(declare-fun splitAt   (String String Int) String)
+
+(define-fun numSplits ((x String) (y String)) Int (2))
+(define-fun splitAt ((x String) (y String) (z String)) String ("x"))
+
 
 ;---------- 3. 基本约束 ----------
 ; 约定：s1、s2 都恰好被分成 2 段
