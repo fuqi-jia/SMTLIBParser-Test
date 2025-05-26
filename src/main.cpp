@@ -97,9 +97,9 @@ int main(int argc, char* argv[]) {
         // for(auto constraint: assertions){
         //     std::cout << parser->toString(constraint) << std::endl;
         // }
-        // auto cnf = parser->toCNF(assertions);
-        // std::cout << "CNF: " << std::endl;
-        // std::cout << parser->toString(cnf) << std::endl;
+        auto cnf = parser->toCNF(assertions);
+        std::cout << "CNF: " << std::endl;
+        std::cout << parser->toString(cnf) << std::endl;
         // auto dnf = parser->toDNF(assertions);
         // std::cout << "DNF: " << std::endl;
         // std::cout << parser->toString(dnf) << std::endl;
