@@ -97,7 +97,8 @@ int main(int argc, char* argv[]) {
         //     std::cout << parser->toString(parser->arithNormalize(constraint)) << std::endl;
         // }
         std::cout << "assertions: " << std::endl;
-        for(auto constraint: assertions){
+        auto constraints = parser->shrinkFormula(assertions);
+        for(auto constraint: constraints){
             std::cout << parser->toString(constraint) << std::endl;
         }
         // auto cnf = parser->toCNF(assertions);
