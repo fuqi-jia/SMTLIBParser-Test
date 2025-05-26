@@ -89,10 +89,14 @@ int main(int argc, char* argv[]) {
         std::cout << "parse success" << std::endl;
         // Retrieve the parsed assertions
         auto assertions = parser->getAssertions();
-        std::cout << "assertions: " << std::endl;
+        std::cout << "assertions: " << assertions.size() << std::endl;
         for(auto constraint: assertions){
-            std::cout << parser->toString(constraint) << std::endl;
+            std::cout << parser->toString(parser->arithNormalize(constraint)) << std::endl;
         }
+        // std::cout << "assertions: " << std::endl;
+        // for(auto constraint: assertions){
+        //     std::cout << parser->toString(constraint) << std::endl;
+        // }
         // auto cnf = parser->toCNF(assertions);
         // std::cout << "CNF: " << std::endl;
         // std::cout << parser->toString(cnf) << std::endl;
