@@ -1,5 +1,5 @@
 SMTLIBParser 测试结果
-运行时间: Fri May 23 03:38:47 CST 2025
+运行时间: Mon May 26 11:32:04 CST 2025
 ----------------------------------------
 正在查找测试文件...
 找到 69 个测试文件.
@@ -7266,7 +7266,7 @@ assertions:
 
 ----------------------------------------
 测试文件: ./test_split_mini.smt2
-error: Wrong number of parameters of "No parameters for operation" in line 19.
+error: Wrong number of parameters of "No parameters for operation" in line 23.
 [33m? 未知[0m - 没有发现'parse success'或'parse failed'
 
 ---------------------------------------- test_summary.log
@@ -7275,5 +7275,5 @@ error: Wrong number of parameters of "No parameters for operation" in line 19.
 [32m成功: 63[0m
 [31m失败: 6[0m
 [31m崩溃: 0[0m
-总耗时: 9.589112565 秒
+总耗时: 10.753997427 秒
 ---------------------------------------- test_summary.log
