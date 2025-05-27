@@ -19,3 +19,14 @@
 (or (not temp_17) temp_1) temp_17 
 (or temp_9 (not temp_17)) 
 (or temp_16 (not temp_15) (not temp_11)))
+
+
+(assert (and (<= x1 6.07) (>= x1 6.08)))
+(assert (and (<= x2 4.86) (>= x2 4.87)))
+(assert (and (<= x3 5.48) (>= x3 5.49)))
+(assert (and (<= x4 4.28) (>= x4 4.29)))
+(assert (and (<= x5 5.92) (>= x5 5.93)))
+(assert (and (<= x6 5.02) (>= x6 5.03)))
+
+(check-sat)
+(get-model)
