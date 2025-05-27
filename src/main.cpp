@@ -89,7 +89,7 @@ int main(int argc, char* argv[]) {
         std::cout << "parse success" << std::endl;
         // Retrieve the parsed assertions
         auto assertions = parser->getAssertions();
-        std::cout << "assertions: " << assertions.size() << std::endl;
+        std::cout << "assertions size: " << assertions.size() << std::endl;
         // for(auto constraint: assertions){
         //     std::cout << "before arithNormalize: " << std::endl;
         //     std::cout << parser->toString(constraint) << std::endl;
@@ -100,9 +100,21 @@ int main(int argc, char* argv[]) {
         for(auto constraint: assertions){
             std::cout << parser->toString(constraint) << std::endl;
         }
-        // auto cnf = parser->toCNF(assertions);
-        // std::cout << "CNF: " << std::endl;
-        // std::cout << parser->toString(cnf) << std::endl;
+        auto cnf = parser->toCNF(assertions);
+        std::cout << "CNF: " << std::endl;
+        std::cout << parser->toString(cnf) << std::endl;
+
+        auto bool_vars = parser->getCNFBoolVars();
+        for(auto var: bool_vars){
+            std::cout << parser->toString(var) << std::endl;
+            std::cout << "maps to "<< parser->toString(parser->getCNFAtom(var)) << std::endl;
+        }
+        auto cnf_atoms = parser->getCNFAtoms();
+        for(auto atom: cnf_atoms){
+            std::cout << parser->toString(atom) << std::endl;
+        }
+        
+        
         // auto dnf = parser->toDNF(assertions);
         // std::cout << "DNF: " << std::endl;
         // std::cout << parser->toString(dnf) << std::endl;
