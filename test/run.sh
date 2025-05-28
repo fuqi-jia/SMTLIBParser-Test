@@ -19,7 +19,7 @@ fi
 # 定义变量
 LOG_FILE="test_results.log"
 SUMMARY_FILE="test_summary.log"
-EXECUTABLE="../build/SMTLIBParser_Test"
+EXECUTABLE="../build/SMTParser_Test"
 TEST_DIR=$(dirname "$0")
 
 # 检查bc命令是否可用
@@ -62,12 +62,12 @@ add_float() {
 cd "$TEST_DIR"
 
 # 清空日志文件
-echo "SMTLIBParser 测试结果" > "$LOG_FILE"
+echo "SMTParser 测试结果" > "$LOG_FILE"
 echo "运行时间: $(date)" >> "$LOG_FILE"
 echo "----------------------------------------" >> "$LOG_FILE"
 
 # 清空摘要文件
-echo "SMTLIBParser 测试摘要" > "$SUMMARY_FILE"
+echo "SMTParser 测试摘要" > "$SUMMARY_FILE"
 echo "运行时间: $(date)" >> "$SUMMARY_FILE"
 echo "----------------------------------------" >> "$SUMMARY_FILE"
 

@@ -17,5 +17,5 @@ pd_no_op_accs.induction.smt2
 current_frame.base.smt2
 
 good_frame_update.induction.smt2
-FOMT_Solver: /pub/data/tansc/genOMT/solver/FOMT-Solver/SMTLIBParser/src/op_parser.cpp:504: std::shared_ptr<SMTLIBParser::DAGNode> SMTLIBParser::Parser::mkNot(std::shared_ptr<SMTLIBParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
+FOMT_Solver: /pub/data/tansc/genOMT/solver/FOMT-Solver/SMTParser/src/op_parser.cpp:504: std::shared_ptr<SMTParser::DAGNode> SMTParser::Parser::mkNot(std::shared_ptr<SMTParser::DAGNode>): Assertion `param->getChildrenSize() == 1' failed.
 Aborted (core dumped)

@@ -1,4 +1,4 @@
-# SMTLIBParser-Test
+# SMTParser-Test
 
 ## Requirements
 ```
@@ -9,7 +9,7 @@ sudo apt install libboost-all-dev
 sudo apt install libgmp-dev
 ```
 
-## Update SMTLIBParser
+## Update SMTParser
 Submodule init:
 ```
 git submodule update --init --recursive
@@ -24,7 +24,7 @@ git submodule update --remote --merge
 mkdir build && cd build
 cmake ..
 make -j12
-./SMTLIBParser_Test ../test/1.smt2
+./SMTParser_Test ../test/1.smt2
 ```
 
 and then output

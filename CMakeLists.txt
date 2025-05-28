@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(SMTLIBParser_Test)
+project(SMTParser_Test)
 
 # set c++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -15,7 +15,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-local-typedefs")
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared libraries" FORCE)
 
 # add SMTParser subdirectory
-add_subdirectory(SMTLIBParser)
+add_subdirectory(SMTParser)
 
 # find GMP library
 find_package(PkgConfig REQUIRED)
@@ -31,7 +31,7 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 # include directories
 target_include_directories(${PROJECT_NAME} PRIVATE 
-    ${CMAKE_SOURCE_DIR}/SMTLIBParser/include
+    ${CMAKE_SOURCE_DIR}/SMTParser/include
     ${CMAKE_SOURCE_DIR}/src
     ${GMP_INCLUDE_DIRS}
     ${GMPXX_INCLUDE_DIRS}
@@ -39,7 +39,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 
 # link libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE 
-    smtlibparser_static  # SMTLIBParser library
+    smtparser_static  # SMTParser library
     ${GMP_LIBRARIES}
     ${GMPXX_LIBRARIES}
 )

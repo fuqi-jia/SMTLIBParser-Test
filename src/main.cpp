@@ -1,17 +1,17 @@
 
 #include "parser.h"
 
-using namespace SMTLIBParser;
+using namespace SMTParser;
 
 void test_evaluator() {
     // Create a parser using factory method
-    auto parser = SMTLIBParser::newParser();
+    auto parser = SMTParser::newParser();
     
     // Alternative: create a parser with file in one step
-    auto fileParser = SMTLIBParser::newParser("../test/formula.smt2");
+    auto fileParser = SMTParser::newParser("../test/formula.smt2");
     
     // Create a model
-    auto model = SMTLIBParser::newModel();
+    auto model = SMTParser::newModel();
     
     // Create and manipulate variables
     auto x = parser->mkVarInt("x");
@@ -34,7 +34,7 @@ void test_evaluator() {
 
 void test_parser() {
     // Initialize the parser
-    SMTLIBParser::Parser parser;
+    SMTParser::Parser parser;
 
     // Parse an SMT-LIB2 file
     if (!parser.parse("../test/formula.smt2")) {
@@ -52,7 +52,7 @@ void test_parser() {
 
 void test_construction() { 
     // Initialize the parser engine
-    SMTLIBParser::Parser parser;
+    SMTParser::Parser parser;
 
     // Create integer variables
     auto x = parser.mkVar(INT_SORT, "x");
@@ -78,8 +78,8 @@ int main(int argc, char* argv[]) {
     // return 0;
 
     // the input parser
-    std::shared_ptr<SMTLIBParser::Parser> parser = 
-        std::make_shared<SMTLIBParser::Parser>();
+    std::shared_ptr<SMTParser::Parser> parser = 
+        std::make_shared<SMTParser::Parser>();
 
     // the input file
     std::string input_file = argv[1];

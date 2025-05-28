@@ -5,7 +5,7 @@
 #include <memory>
 #include <z3++.h>
 
-using namespace SMTLIBParser;
+using namespace SMTParser;
 
 bool check_equivalence(const std::string& original_file, const std::string& output_file) {
     try {
@@ -113,8 +113,8 @@ int main(int argc, char* argv[]) {
     std::string output_file = input_file + ".out.smt2";
     
     // 解析器
-    std::shared_ptr<SMTLIBParser::Parser> parser = 
-        std::make_shared<SMTLIBParser::Parser>();
+    std::shared_ptr<SMTParser::Parser> parser = 
+        std::make_shared<SMTParser::Parser>();
 
     // 解析输入文件
     if(parser->parse(input_file)) {
